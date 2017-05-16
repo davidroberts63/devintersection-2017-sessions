@@ -1,0 +1,174 @@
+<!doctype html>
+<html manifest="appcache" lang="en">>
+<head>
+	<title>Conference Sessions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<style>
+		.ui-listview > li p, .ui-listview > li h3 {
+			white-space: normal;
+		}
+		.ui-listview > li h3 {
+			width: 90%
+		}
+		.ui-listview .ui-li-aside {
+			right: 1em;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="site-toolbar" data-role="header" data-position="fixed">
+		<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+			<select name="conference-day" id="conference-day">
+				<option value="1">Monday</option>
+				<option value="2">Tuesday</option>
+				<option value="3">Wednesday</option>
+			</select>
+			<select name="conference-track" id="conference-track">
+				<option value="dev">Dev</option>
+				<option value="sql">SQL</option>
+				<option value="it">IT</option>
+			</select>
+			<a href="#sponsors-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Sponsors</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="home-page">
+		<div role="main" class="ui-content">
+			This is independent work and not affiliated with DEVintersection. I'm just an attendee that couldn't find a easy to use session menu from my phone. Pick a day and a track, choose Yes, No, Maybe. Data is stored in the browser so it's good between browser closings.
+			<br/><br/>
+			Additional filtering might be added soon.
+			<br/><br/>
+			Created by David Roberts @davidroberts63.<br/>
+			Also, please visit the sponsors, they help out a lot.
+
+			<br/><br/>
+			I will take pull requests for course corrections and enhancements.
+			<a href="https://github.com/davidroberts63/devintersection-2017-sessions">https://github.com/davidroberts63/devintersection-2017-sessions</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="sessions-page">
+		<div role="main" class="ui-content" id="sessions-listing">
+			<ul id="sessions-list" data-role="listview" data-filter="true">
+				<li>
+					<h3>Some talk name</h3>
+					<p>Some longer form of the description of this talk. It might go on for a while longer.</p>
+					<p class="ui-li-aside"><strong>Pelican 1</strong></p>
+				</li>
+				<li data-role="list-divider">10:30 AM - 11:30 AM</li>
+				<li><a href="#">BMW</a></li>
+				<li><a href="#">Cadillac</a></li>
+				<li><a href="#">Ferrari</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="page" id="sponsors-page">
+		<div role="main" class="ui-content">
+			<h1> ALL THE SPONSORS </h1>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function nano(templateId, data) {
+			var template = $(templateId)[0].innerHTML
+			return template.replace(/\{([\w\.]*)\}/g, function(str, key) {
+				var keys = key.split("."), v = data[keys.shift()];
+
+				if (typeof(v) == 'function') {
+					v = v.bind(data).call();
+				}
+
+				for (var i = 0, l = keys.length; i < l; i++) {
+					v = v[keys[i]];
+				}
+
+				return (typeof v !== "undefined" && v !== null) ? v : "";
+			});
+		}
+	</script>
+
+	<script type="text/html" id="a-talk">
+		<li>
+			<h3>{title}</h3>
+			<h3>{speaker}</h3>
+			<p>{description}</p>
+			<p class="ui-li-aside"><strong>{room}</strong></p>
+		</li>
+	</script>
+
+	<script type="text/html" id="a-timeslot">
+		<li data-role="list-divider">{slot}</li>
+	</script>
+
+	<script>
+		$(function() {
+			var allTalks = [];
+
+			$("#site-toolbar").toolbar({ theme: "a" });
+
+			$("#conference-day").on("change", displayTalks);
+			$("#conference-track").on("change", displayTalks);
+
+			function displayTalks() {
+				var selectedDay = $("#conference-day").val();
+				var selectedTrack = $("#conference-track").val();
+				console.debug("Showing %s talks on %s", selectedTrack, selectedDay);
+
+				var sessionsList = $("#sessions-list")
+				sessionsList.children().remove();
+				allTalks
+					.filter(forTalksOn(selectedDay))
+					.map(talkToListing(sessionsList));
+				sessionsList.listview("refresh");
+			};
+
+			function forTalksOn(selectedDay) {
+				return function(item, index, arr) { 
+					return item.day == selectedDay;
+				}
+			};
+
+			function formatTime(time) {
+				var result = "" + (time.getHours() > 12 ? time.getHours() - 12 : time.getHours());
+				result += ":" + time.getMinutes();
+				result += time.getHours() >= 12 ? "PM" : "AM";
+				return result;
+			}
+			
+			function parseTimes(item) {
+				var startParsed = new Date(item.startTime);
+				var endParsed = new Date(item.endTime);
+				item.day = startParsed.getDay();
+				item.slot = formatTime(startParsed) + " - " + formatTime(endParsed);
+			};
+
+			function getTalkData() {
+				$.get("coursedata.json").done(function(data) {
+					allTalks = data;
+					allTalks.map(parseTimes);
+					console.debug(allTalks);
+				});
+			}
+
+			function talkToListing(listing) {
+				var timeslot = null;
+				return function(talk) {
+					if (talk.slot != timeslot) {
+						timeslot = talk.slot;
+						listing.append(nano("#a-timeslot", { slot: talk.slot }));
+					}
+					listing.append(nano("#a-talk", talk));
+				};
+			}
+
+			getTalkData();
+		});
+	</script>
+</body>
+
+</html>
