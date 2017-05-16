@@ -22,6 +22,7 @@
 <body>
 	<div id="site-toolbar" data-role="header" data-position="fixed">
 		<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+			<a href="#home-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Home</a>
 			<select name="conference-day" id="conference-day">
 				<option value="1">Monday</option>
 				<option value="2">Tuesday</option>
@@ -111,10 +112,12 @@
 
 			$("#site-toolbar").toolbar({ theme: "a" });
 
-			$("#conference-day").on("change", displayTalks);
-			$("#conference-track").on("change", displayTalks);
+			$("#conference-day").on("click", displayTalks);
+			$("#conference-track").on("click", displayTalks);
 
 			function displayTalks() {
+				$.mobile.navigate("#sessions-page");
+
 				var selectedDay = $("#conference-day").val();
 				var selectedTrack = $("#conference-track").val();
 				console.debug("Showing %s talks on %s", selectedTrack, selectedDay);
@@ -123,6 +126,7 @@
 				sessionsList.children().remove();
 				allTalks
 					.filter(forTalksOn(selectedDay))
+					.filter(forTalksIn(selectedTrack))
 					.map(talkToListing(sessionsList));
 				sessionsList.listview("refresh");
 			};
@@ -133,13 +137,19 @@
 				}
 			};
 
+			function forTalksIn(selectedTrack) {
+				return function(item, index, arr) {
+					return item.track == selectedTrack;
+				}
+			}
+
 			function formatTime(time) {
 				var result = "" + (time.getHours() > 12 ? time.getHours() - 12 : time.getHours());
 				result += ":" + time.getMinutes();
 				result += time.getHours() >= 12 ? "PM" : "AM";
 				return result;
 			}
-			
+
 			function parseTimes(item) {
 				var startParsed = new Date(item.startTime);
 				var endParsed = new Date(item.endTime);
