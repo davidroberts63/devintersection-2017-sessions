@@ -1,11 +1,11 @@
 <!doctype html>
-<html manifest="appcache" lang="en">>
+<html lang="en">>
 <head>
 	<title>Conference Sessions</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="jquery-mobile-1.4.5.min.css">
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="jquery-mobile-1.4.5.min.js"></script>
 	<style>
 		.ui-listview > li p, .ui-listview > li h3 {
 			white-space: normal;
@@ -35,6 +35,9 @@
 			</select>
 			<a href="#sponsors-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Sponsors</a>
 		</div>
+		<ul id="fake-list" data-role="listview">
+			<li data-role="list-divider" id="fake-header"></li>
+		</ul>
 	</div>
 
 	<div data-role="page" id="home-page">
@@ -99,6 +102,14 @@
 			<h3>{speaker}</h3>
 			<p>{description}</p>
 			<p class="ui-li-aside"><strong>{room}</strong></p>
+			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+				<input type="radio" name="going-{id}" id="going-{id}-yes" value="yes">
+				<label for="going-{id}-yes">Yes</label>
+				<input type="radio" name="going-{id}" id="going-{id}-no" value="no">
+				<label for="going-{id}-no">No</label>
+				<input type="radio" name="going-{id}" id="going-{id}-maybe" value="maybe">
+				<label for="going-{id}-maybe">Maybe</label>
+			</div>
 		</li>
 	</script>
 
@@ -107,6 +118,13 @@
 	</script>
 
 	<script>
+	function checkVisible(elm) {
+		console.log(elm.getBoundingClientRect().top);
+		console.log(window.innerHeight);
+		var rect = elm.getBoundingClientRect();
+		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+		return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+	}
 		$(function() {
 			var allTalks = [];
 
@@ -122,14 +140,31 @@
 				var selectedTrack = $("#conference-track").val();
 				console.debug("Showing %s talks on %s", selectedTrack, selectedDay);
 
-				var sessionsList = $("#sessions-list")
+				var sessionsList = $("#sessions-list");
 				sessionsList.children().remove();
 				allTalks
 					.filter(forTalksOn(selectedDay))
 					.filter(forTalksIn(selectedTrack))
 					.map(talkToListing(sessionsList));
-				sessionsList.listview("refresh");
+				sessionsList.listview().listview("refresh");
+
+				var groups = $("#sessions-list li div");
+				groups.controlgroup().controlgroup("refresh");
+				window.listDividers = $("li[data-role='list-divider']").get().reverse();
+
+				$("#fake-list").hide();
 			};
+
+			function byStartTimeAndTitle(a, b) {
+				if(a.startTime < b.startTime) return -1;
+				if(b.startTime < a.startTime) return 1;
+				// Times are same, sort by title
+				if(a.title < b.title) return -1;
+				if(b.title < a.title) return 1;
+				
+				// Seriously, same time AND title?
+				return 0;
+			}
 
 			function forTalksOn(selectedDay) {
 				return function(item, index, arr) { 
@@ -153,15 +188,18 @@
 			function parseTimes(item) {
 				var startParsed = new Date(item.startTime);
 				var endParsed = new Date(item.endTime);
+				item.startTime = startParsed;
+				item.endTime = endParsed;
 				item.day = startParsed.getDay();
 				item.slot = formatTime(startParsed) + " - " + formatTime(endParsed);
 			};
 
 			function getTalkData() {
-				$.get("coursedata.json").done(function(data) {
+				$.getJSON("talks.json").done(function(data) {
 					allTalks = data;
+					window.allTalks = allTalks;
 					allTalks.map(parseTimes);
-					console.debug(allTalks);
+					allTalks = allTalks.sort(byStartTimeAndTitle);
 				});
 			}
 
@@ -177,7 +215,39 @@
 			}
 
 			getTalkData();
+
+			$(document).on("scroll", function() {
+				window.processDivider(
+					window.listDividers.find(window.firstHeaderScrolledOutOfView)					
+				);
+			});
+
+			$("#fake-list").hide();
+			
 		});
+
+		listDividers = $("li[data-role='list-divider']").get().reverse();
+		currentHeader = null;
+
+		processDivider = function(item) {
+			if(!item && currentHeader != null) {
+				console.log("Hiding");
+				$("#fake-list").hide();
+			}
+
+			if(item && item != currentHeader) {
+				console.log("Showing");
+				currentHeader = item;
+				$("#fake-header")[0].innerText = 
+					item.innerText;
+				$("#fake-list").show();
+			}
+		}
+
+		firstHeaderScrolledOutOfView = function(item) {
+			return item.getBoundingClientRect().bottom < 75;
+		}
+
 	</script>
 </body>
 
