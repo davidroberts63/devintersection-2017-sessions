@@ -42,7 +42,10 @@
 			<a href="#session-map" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Map</a>
 		</div>
 		<ul id="fake-list" data-role="listview">
-			<li data-role="list-divider" id="fake-header"></li>
+			<li data-role="list-divider">
+				<span id="fake-header"></span>
+				<a id="back-to-sessions" href="#sessions-page" data-role="button" class="ui-btn ui-corner-all">Back to sessions</a>
+			</li>
 		</ul>
 	</div>
 
@@ -192,6 +195,9 @@
 
 	<div data-role="page" id="sponsors-page">
 		<div role="main" class="ui-content">
+			<div class="ui-bar">
+				<a href="#sessions-page" data-role="button" class="ui-btn ui-corner-all">Back to sessions</a>
+			</div>
 			<h1> ALL THE SPONSORS </h1>
 		</div>
 	</div>
@@ -366,15 +372,34 @@
 				$.mobile.navigate("#session-map");
 			}
 
+			function showBackToSessionsButton() {
+				$("#fake-header").hide();
+				$("#fake-list").show();
+				$("#back-to-sessions").show();	
+			}
+
 			getTalkData();
 
 			$(document).on("scroll", function() {
-				window.processDivider(
-					window.listDividers.find(window.firstHeaderScrolledOutOfView)					
-				);
+				if($.mobile.activePage[0].id == "sessions-page") {
+					$("#back-to-sessions").hide();
+					window.processDivider(
+						window.listDividers.find(window.firstHeaderScrolledOutOfView)					
+					);					
+				}
 			});
 
+			$(document).on("pagebeforeshow", "#sessions-page", function() { 
+				$("#fake-list").hide();
+				$("#fake-header").show();
+				$("#back-to-sessions").hide(); 
+			});
+
+			$(document).on("pagebeforeshow", "#home-page", showBackToSessionsButton);
+			$(document).on("pagebeforeshow", "#sponsors-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow","#session-map", function( event, ui ) {
+				showBackToSessionsButton();
+
 				if(previousRoom != null) {
 					talkRoom = talkRoom.toLowerCase().replace(" ","");
 					var textEle = document.getElementById(talkRoom);
