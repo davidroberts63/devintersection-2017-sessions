@@ -153,6 +153,8 @@
 				window.listDividers = $("li[data-role='list-divider']").get().reverse();
 
 				$("#fake-list").hide();
+				$("#sessions-list input[type='radio']").change(saveChoice);
+				$("#sessions-list input[type='radio']").map(loadChoice);				
 			};
 
 			function byStartTimeAndTitle(a, b) {
@@ -214,6 +216,18 @@
 				};
 			}
 
+			function saveChoice(ev) {
+				console.log("Saving choice: %s %s", ev.target.name, ev.target.value);
+				localStorage.setItem(ev.target.name, ev.target.value);
+			}
+
+			function loadChoice(index, item) {
+				var value = localStorage.getItem(item.name);
+				if(item.value == value) {
+					$(item).attr("checked", true).checkboxradio("refresh");
+				}
+			}
+
 			getTalkData();
 
 			$(document).on("scroll", function() {
@@ -223,7 +237,6 @@
 			});
 
 			$("#fake-list").hide();
-			
 		});
 
 		listDividers = $("li[data-role='list-divider']").get().reverse();
@@ -231,12 +244,10 @@
 
 		processDivider = function(item) {
 			if(!item && currentHeader != null) {
-				console.log("Hiding");
 				$("#fake-list").hide();
 			}
 
 			if(item && item != currentHeader) {
-				console.log("Showing");
 				currentHeader = item;
 				$("#fake-header")[0].innerText = 
 					item.innerText;
