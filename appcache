@@ -1,6 +1,7 @@
 CACHE MANIFEST
-# v003
+# v004
 index.html
+app.js
 talks.json
 jquery.mobile-1.4.5.min.css
 jquery-1.12.4.min.js
