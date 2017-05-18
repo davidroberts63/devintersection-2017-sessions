@@ -235,8 +235,10 @@
 
 	<script type="text/javascript">
 		function nano(templateId, data) {
-			var template = $(templateId)[0].innerHTML
-			return template.replace(/\{([\w\.]*)\}/g, function(str, key) {
+			var template = document.getElementById(templateId).innerHTML
+			return template.replace(/\{([\w\.]*)\}/g, replaceTag);
+
+			function replaceTag(str, key) {
 				var keys = key.split("."), v = data[keys.shift()];
 
 				if (typeof(v) == 'function') {
@@ -248,7 +250,7 @@
 				}
 
 				return (typeof v !== "undefined" && v !== null) ? v : "";
-			});
+			}
 		}
 	</script>
 

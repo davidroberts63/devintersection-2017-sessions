@@ -6,32 +6,41 @@ $(function() {
     $("#conference-day").on("change", function() { $.mobile.navigate("#sessions-page"); displayTalks(); });
     $("#conference-track").on("change", function() { $.mobile.navigate("#sessions-page"); displayTalks(); });
 
+    function getValues() {
+        selectedDay = $("#conference-day").val();
+        selectedTrack = $("#conference-track").val();
+        selectedChoice = $("#choiceFilter").val()
+    }
+
+    function setupControls() {
+        $("#fake-list").hide();
+        $("#sessions-list input[type='radio']").change(saveChoice);
+        $("#sessions-list input[type='radio']").map(loadChoice);				
+        $(".map-button").on("click", showMap);
+    }
+
     function displayTalks() {
         if(!sessionSelectionHasChanged()) {
             return;
         }
-        selectedDay = $("#conference-day").val();
-        selectedTrack = $("#conference-track").val();
-        selectedChoice = $("#choiceFilter").val()
+        getValues();
         console.debug("Showing %s talks on %s decided on %s", selectedTrack, selectedDay, selectedChoice);
 
         var sessionsList = $("#sessions-list");
         sessionsList.children().remove();
-        allTalks
+        var res = allTalks
             .filter(forTalksOn(selectedDay))
             .filter(forTalksIn(selectedTrack))
             .filter(forTalksDecided(selectedChoice))
-            .map(talkToListing(sessionsList));
+            .reduce(toSingleHtmlSource(), "");
+        talkToListing(res, sessionsList);
         sessionsList.listview().listview("refresh");
 
         var groups = $("#sessions-list li div");
         groups.controlgroup().controlgroup("refresh");
         window.listDividers = $("li[data-role='list-divider']").get().reverse();
 
-        $("#fake-list").hide();
-        $("#sessions-list input[type='radio']").change(saveChoice);
-        $("#sessions-list input[type='radio']").map(loadChoice);				
-        $(".map-button").on("click", showMap);
+        setupControls();
     };
 
     function byStartTimeAndTitle(a, b) {
@@ -96,15 +105,21 @@ $(function() {
         });
     }
 
-    function talkToListing(listing) {
+    var talkTemplate = null;
+
+    function toSingleHtmlSource() {
         var timeslot = null;
-        return function(talk) {
+        return function(result, talk) {
             if (talk.slot != timeslot) {
                 timeslot = talk.slot;
-                listing.append(nano("#a-timeslot", { slot: talk.slot }));
+                result += nano("a-timeslot", { slot: talk.slot });
             }
-            listing.append(nano("#a-talk", talk));
-        };
+            return result += nano("a-talk", talk);
+        }
+    }
+
+    function talkToListing(htmlSource, listing) {
+        listing.append(htmlSource);
     }
 
     function saveChoice(ev) {
