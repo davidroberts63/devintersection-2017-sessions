@@ -366,9 +366,11 @@
 			}
 
 			function formatTime(time) {
-				var result = "" + (time.getHours() > 12 ? time.getHours() - 12 : time.getHours());
-				result += ":" + time.getMinutes();
-				result += time.getHours() >= 12 ? "PM" : "AM";
+				// Force displaying in the time zone the conference is in, no matter where the user may be.
+				var hour = time.getUTCHours() + timeZoneOffset;
+				var result = "" + (hour > 12 ? hour - 12 : hour);
+				result += ":" + ("00" + time.getMinutes()).slice(-2);
+				result += hour >= 12 ? "PM" : "AM";
 				return result;
 			}
 
@@ -494,6 +496,7 @@
 			var selectedTrack = null;
 			var mapTalkId = null;
 			var previousRoom = null;
+			var timeZoneOffset = -4;
 		});
 
 		listDividers = $("li[data-role='list-divider']").get().reverse();
