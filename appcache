@@ -1,7 +1,7 @@
 CACHE MANIFEST
-# v002
+# v003
 index.html
 talks.json
-https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css
-https://code.jquery.com/jquery-1.12.4.min.js
-https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js
+jquery.mobile-1.4.5.min.css
+jquery-1.12.4.min.js
+jquery.mobile-1.4.5.min.js
