@@ -15,7 +15,7 @@ $(function() {
     function setupControls() {
         $("#fake-list").hide();
         $("#sessions-list input[type='radio']").change(saveChoice);
-        $("#sessions-list input[type='radio']").map(loadChoice);				
+        $("#sessions-list input[type='radio']").map(loadChoice);
         $(".map-button").on("click", showMap);
     }
 
@@ -104,8 +104,6 @@ $(function() {
             allTalks = allTalks.sort(byStartTimeAndTitle);
         });
     }
-
-    var talkTemplate = null;
 
     function toSingleHtmlSource() {
         var timeslot = null;
