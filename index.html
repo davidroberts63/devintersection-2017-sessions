@@ -25,6 +25,9 @@
 		.diagram-text-inside.focus, g.diagram-text-inside text.focus{
 			font-size: 150px;
 		}
+		#sessions-listing form.ui-filterable div.ui-input-search {
+			display: inline-block;
+		}
 	</style>
 </head>
 
@@ -251,6 +254,15 @@
 		<li data-role="list-divider">{slot}</li>
 	</script>
 
+	<script type="text/html" id="talkChoiceFilterSource">
+		<select name="choiceFilter" id="choiceFilter" data-inline="true" data-mini="true">
+			<option value="all" selected>All</option>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+			<option value="maybe">Maybe</option>
+		</select>
+	</script>
+
 	<script src="jquery-1.12.4.min.js"></script>
 
 	<script>
@@ -276,13 +288,15 @@
 				}
 				selectedDay = $("#conference-day").val();
 				selectedTrack = $("#conference-track").val();
-				console.debug("Showing %s talks on %s", selectedTrack, selectedDay);
+				selectedChoice = $("#choiceFilter").val()
+				console.debug("Showing %s talks on %s decided on %s", selectedTrack, selectedDay, selectedChoice);
 
 				var sessionsList = $("#sessions-list");
 				sessionsList.children().remove();
 				allTalks
 					.filter(forTalksOn(selectedDay))
 					.filter(forTalksIn(selectedTrack))
+					.filter(forTalksDecided(selectedChoice))
 					.map(talkToListing(sessionsList));
 				sessionsList.listview().listview("refresh");
 
@@ -318,6 +332,12 @@
 					return item.day == selectedDay;
 				}
 			};
+
+			function forTalksDecided(selectedChoice) {
+				return function(item, index, arr) {
+					return selectedChoice == "all" || localStorage.getItem("going-" + item.id) == selectedChoice;
+				}
+			}
 
 			function forTalksIn(selectedTrack) {
 				return function(item, index, arr) {
@@ -386,7 +406,8 @@
 
 			function sessionSelectionHasChanged() {
 				return selectedDay != $("#conference-day").val() 
-					|| selectedTrack != $("#conference-track").val();				
+					|| selectedTrack != $("#conference-track").val()
+					|| selectedChoice != $("#choiceFilter").val();
 			}
 
 			getTalkData();
@@ -404,10 +425,23 @@
 				$("#fake-list").hide();
 				$("#fake-header").show();
 				$("#back-to-sessions").hide();
+
+				if(!document.getElementById("choiceFilter")) {
+					var template = document.getElementById("talkChoiceFilterSource").innerHTML;
+					$(template)
+						.appendTo("#sessions-listing form.ui-filterable")
+						.selectmenu()
+						.on("change", function() { 
+							displayTalks(); 
+						});
+				}
+
 				displayTalks();
 			});
 
-			$(document).on("pageinit", "#home-page", showBackToSessionsButton);
+			$(document).on("pageinit", "#home-page", function() {
+				showBackToSessionsButton();
+			});
 			$(document).on("pagebeforeshow", "#home-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow", "#sponsors-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow","#session-map", function( event, ui ) {
@@ -435,6 +469,7 @@
 				}
 			});
 
+			var selectedChoice = null;
 			var selectedDay = null;
 			var selectedTrack = null;
 			var mapTalkId = null;
