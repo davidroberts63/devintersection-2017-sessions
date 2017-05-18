@@ -4,8 +4,6 @@
 	<title>Conference Sessions</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="jquery-mobile-1.4.5.min.css">
-	<script src="jquery-1.12.4.min.js"></script>
-	<script src="jquery-mobile-1.4.5.min.js"></script>
 	<style>
 		.ui-listview > li p, .ui-listview > li h3 {
 			white-space: normal;
@@ -27,8 +25,7 @@
 		<div data-role="controlgroup" data-type="horizontal" data-mini="true">
 			<a href="#home-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Home</a>
 			<select name="conference-day" id="conference-day">
-				<option disabled selected value>- day -</option>
-				<option value="1">Monday</option>
+				<option value="1" selected>Monday</option>
 				<option value="2">Tuesday</option>
 				<option value="3">Wednesday</option>
 			</select>
@@ -245,6 +242,8 @@
 		<li data-role="list-divider">{slot}</li>
 	</script>
 
+	<script src="jquery-1.12.4.min.js"></script>
+
 	<script>
 	function checkVisible(elm) {
 		console.log(elm.getBoundingClientRect().top);
@@ -253,23 +252,21 @@
 		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
 		return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 	}
-		$(document).ready(function() { 
-			$("#fake-list").hide();
-		});
 
 		$(function() {
 			var allTalks = [];
 
 			$("#site-toolbar").toolbar({ theme: "a" });
 
-			$("#conference-day").on("change", displayTalks);
-			$("#conference-track").on("change", displayTalks);
+			$("#conference-day").on("change", function() { $.mobile.navigate("#sessions-page"); displayTalks(); });
+			$("#conference-track").on("change", function() { $.mobile.navigate("#sessions-page"); displayTalks(); });
 
 			function displayTalks() {
-				$.mobile.navigate("#sessions-page");
-
-				var selectedDay = $("#conference-day").val();
-				var selectedTrack = $("#conference-track").val();
+				if(!sessionSelectionHasChanged()) {
+					return;
+				}
+				selectedDay = $("#conference-day").val();
+				selectedTrack = $("#conference-track").val();
 				console.debug("Showing %s talks on %s", selectedTrack, selectedDay);
 
 				var sessionsList = $("#sessions-list");
@@ -378,6 +375,11 @@
 				$("#back-to-sessions").show();	
 			}
 
+			function sessionSelectionHasChanged() {
+				return selectedDay != $("#conference-day").val() 
+					|| selectedTrack != $("#conference-track").val();				
+			}
+
 			getTalkData();
 
 			$(document).on("scroll", function() {
@@ -392,9 +394,11 @@
 			$(document).on("pagebeforeshow", "#sessions-page", function() { 
 				$("#fake-list").hide();
 				$("#fake-header").show();
-				$("#back-to-sessions").hide(); 
+				$("#back-to-sessions").hide();
+				displayTalks();
 			});
 
+			$(document).on("pageinit", "#home-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow", "#home-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow", "#sponsors-page", showBackToSessionsButton);
 			$(document).on("pagebeforeshow","#session-map", function( event, ui ) {
@@ -420,8 +424,8 @@
 				}
 			});
 
-			$("#fake-list").hide();
-
+			var selectedDay = null;
+			var selectedTrack = null;
 			var mapTalkId = null;
 			var previousRoom = null;
 		});
@@ -447,6 +451,8 @@
 		}
 
 	</script>
+	<script src="jquery-mobile-1.4.5.min.js"></script>
+
 </body>
 
 </html>
