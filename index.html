@@ -35,12 +35,12 @@
 	<div id="site-toolbar" data-role="header" data-position="fixed">
 		<div data-role="controlgroup" data-type="horizontal" data-mini="true">
 			<a href="#home-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Home</a>
-			<select name="conference-day" id="conference-day">
+			<select name="conference-day" id="conference-day" aria-label="Conference day">
 				<option value="1" selected>Monday</option>
 				<option value="2">Tuesday</option>
 				<option value="3">Wednesday</option>
 			</select>
-			<select name="conference-track" id="conference-track">
+			<select name="conference-track" id="conference-track" aria-label="Conference track">
 				<option value="all" selected>All</option>
 				<option value="dev">Dev</option>
 				<option value="sql">SQL</option>
@@ -61,9 +61,9 @@
 		<div role="main" class="ui-content">
 			This is independent work and not affiliated with DEVintersection. I'm just an attendee that found the provided app...slow. Pick a day and a track, choose Yes, No, Maybe, filter. The map will highlight the room the talk is in as well. Data is stored in the browser so it's good between browser closings.
 			<br/><br/>
-			Currently, the dev track has times and rooms set. The other tracks I could use help on.
+			The session data for this is manually maintained by me. If you see an error please contact me or send a pull request.
 			<br/><br/>
-			Created by David Roberts @davidroberts63.<br/>
+			Created by David Roberts <a href="https://twitter.com/davidroberts63">@davidroberts63</a>.<br/>
 			Also, please visit the sponsors.
 			<br/><br/>
 			Talk about the conference on the DEVintersection <a href="https://twitter.com/DevIntersection">Twitter</a> and <a href="https://www.facebook.com/devintersection?fref=ts">Facebook</a> sites.
@@ -71,34 +71,13 @@
 			I will take pull requests for session corrections and enhancements.
 			<a href="https://github.com/davidroberts63/devintersection-2017-sessions">https://github.com/davidroberts63/devintersection-2017-sessions</a>
 			<br/><br/>
-			Version 005
+			Version 006
 		</div>
 	</div>
 
 	<div data-role="page" id="sessions-page">
 		<div role="main" class="ui-content" id="sessions-listing">
 			<ul id="sessions-list" data-role="listview" data-filter="true">
-				<li>
-					<h3>{title}</h3>
-					<h3>{speaker}</h3>
-					<p>{description}</p>
-					<p class="ui-li-aside"><strong>{room}</strong></p>
-					<div data-role="controlgroup" data-type="horizontal" data-mini="true" style="display: inline">
-						<input type="radio" name="going-{id}" id="going-{id}-yes" value="yes">
-						<label for="going-{id}-yes">Yes</label>
-						<input type="radio" name="going-{id}" id="going-{id}-no" value="no">
-						<label for="going-{id}-no">No</label>
-						<input type="radio" name="going-{id}" id="going-{id}-maybe" value="maybe">
-						<label for="going-{id}-maybe">Maybe</label>
-					</div>
-					<div data-role="controlgroup" data-type="horizontal" data-mini="true" style="display: inline">
-						<a href="#session-map" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini" style="">Map</a>
-					</div>
-				</li>
-				<li data-role="list-divider">10:30 AM - 11:30 AM</li>
-				<li><a href="#">BMW</a></li>
-				<li><a href="#">Cadillac</a></li>
-				<li><a href="#">Ferrari</a></li>
 			</ul>
 		</div>
 	</div>
@@ -132,6 +111,7 @@
 <text x="3242.62548828125" y="2129.86669921875" id="peacock1" class="diagram-text-inside">1</text>
 <text x="3506.931640625" y="1886.70532226563" id="peacock2" class="diagram-text-inside">2</text>
 <text x="1700" y="3300" id="swanballroom" class="diagram-text-inside">Swan Ballroom</text>
+<text x="1700" y="3300" id="swan5-10" class="diagram-text-inside">Swan Ballroom</text>
 <text x="2345.02563476563" y="2774.70947265625" id="swan7" class="diagram-text-inside">Swan 7</text>
 <text x="2345.02587890625" y="3119.33227539063" id="swan8" class="diagram-text-inside">Swan 8</text>
 <text x="2345.02563476563" y="3495.765625" id="swan9" class="diagram-text-inside">Swan 9</text>
@@ -166,6 +146,7 @@
 <text x="1926.09350585938" y="4198.0634765625" id="115781" class="diagram-text-inside">Swan Foyer</text>
 <text x="637.702392578125" y="3843.03857421875" id="swan4" class="diagram-text-inside">Swan 4</text>
 <text x="637.702026367188" y="3498.41674804688" id="swan3" class="diagram-text-inside">Swan 3</text>
+<text x="675.702026367188" y="3300.41674804688" id="swan2-3" class="diagram-text-inside">and</text>
 <text x="637.702026367188" y="3121.98315429688" id="swan2" class="diagram-text-inside">Swan 2</text>
 <text x="2340.55200195313" y="3840.38793945313" id="swan10" class="diagram-text-inside">Swan 10</text>
 <text x="3034.15283203125" y="3713.14282226563" id="mockingbird" class="diagram-text-inside">Mockingbird</text>
@@ -262,14 +243,14 @@
 			<h3>{speakers}</h3>
 			<p>{description}</p>
 			<p class="ui-li-aside"><strong>{room}</strong></p>
-			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+			<div data-role="controlgroup" data-type="horizontal" data-mini="true"><fieldset aria-label="Attending?">
 				<input type="radio" name="going-{id}" id="going-{id}-yes" value="yes">
 				<label for="going-{id}-yes">Yes</label>
 				<input type="radio" name="going-{id}" id="going-{id}-no" value="no">
 				<label for="going-{id}-no">No</label>
 				<input type="radio" name="going-{id}" id="going-{id}-maybe" value="maybe">
 				<label for="going-{id}-maybe">Maybe</label>
-			</div>
+			</fieldset></div>
 			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
 				<a href="#" data-talkid="{id}" class="map-button ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini" style="">Map</a>
 			</div>
@@ -281,7 +262,7 @@
 	</script>
 
 	<script type="text/html" id="talkChoiceFilterSource">
-		<select name="choiceFilter" id="choiceFilter" data-inline="true" data-mini="true">
+		<select name="choiceFilter" id="choiceFilter" data-inline="true" data-mini="true" aria-label="Choice filter">
 			<option value="all" selected>All</option>
 			<option value="yes">Yes</option>
 			<option value="no">No</option>
