@@ -344,7 +344,7 @@
         "track":  "it",
         "title":  "Manage Office 365 Like A Ninja (Part 1)",
         "description":  "Ninjas move quietly, disturb nothing and get the job done. Office 365 Admins need to be like ninjas – the 24x7 nature of Office 365 means that users are able to use their IT systems like never before. The Martini principle of ‘anytime, anyplace, anywhere’ means that the Office 365 IT Pro needs to be faster, wiser and stealthier than ever before. In part one of a two-part series unique to DevIntersection, international consultant and speaker Seb will walk through: \n\n• The Office 365 Portal\n• PowerShell fundamentals for Office 365\n• Groups, Planner and other Office 365 elements\n\n\nPacked with indispensable advice from the real-world, if you’re responsible for the management of your Office 365 tenant, trying to understand what’s involved, or you just want to know more, these sessions are for you.",
-        "id":  "manageofficelikeaninjapart",
+        "id":  "manageofficelikeaninjapart1",
         "endTime":  "2017-05-22T19:00:00Z",
         "room":  "Parrot",
         "startTime":  "2017-05-22T18:00:00Z"
@@ -514,7 +514,7 @@
         "track":  "it",
         "title":  "Manage Office 365 Like A Ninja (Part 2)",
         "description":  "Ninjas move quietly, disturb nothing and get the job done. Office 365 Admins need to be like ninjas – the 24x7 nature of Office 365 means that users are able to use their IT systems like never before. The Martini principle of ‘anytime, anyplace, anywhere’ means that the Office 365 IT Pro needs to be faster, wiser and stealthier than ever before. In part two of a two-part series unique to DevIntersection, international consultant and speaker Seb will walk through: \n\n• CSOM fundamentals\n• SharePoint Online the ‘New-fashioned’ way\n• Advance usage of PowerShell and Office 365\n\n\nPacked with indispensable advice from the real-world, if you’re responsible for the management of your Office 365 tenant, trying to understand what’s involved, or you just want to know more, these sessions are for you.",
-        "id":  "manageofficelikeaninjapart",
+        "id":  "manageofficelikeaninjapart2",
         "endTime":  "2017-05-22T20:45:00Z",
         "room":  "Parrot",
         "startTime":  "2017-05-22T19:30:00Z"
@@ -604,7 +604,7 @@
         "track":  "it",
         "title":  "Azure Ad Sso Deep Dive",
         "description":  "The pain point: You need to give your on-premises Active Directory users a single-sign on (SSO) experience with SaaS apps hosted in the Azure (and other) public clouds, and you have no clue how to begin. \n\nThe solution: In this session we\u0027ll examine the options for identity synchronization and SSO in the Microsoft Azure hybrid cloud scenario. We\u0027ll use Azure AD Connect to perform both basic password synchronization as well as ADFS-based identity federation to Office 365 and other cloud-based SaaS apps. \n\nHere are some of the things you\u0027ll know how to do after attending this presentation:\n• Configure account and password synchronization to Azure AD\n• Deploy ADFS-based identity federation with Azure AD\n• Set up SSO between Azure AD and various other SaaS apps \n\nTim set up a permanent session page and GitHub repository for this presentation, so you\u0027ll be able to recreate all examples and review all session materials at your leisure.",
-        "id":  "azureadssodeepdive",
+        "id":  "azureadssodeepdive1",
         "endTime":  "2017-05-23T15:00:00Z",
         "room":  "Pelican 2",
         "startTime":  "2017-05-23T14:00:00Z"
@@ -974,7 +974,7 @@
         "track":  "dev",
         "title":  "Powershell Futures",
         "description":  "Coming soon",
-        "id":  "powershellfutures",
+        "id":  "powershellfutures1",
         "endTime":  "2017-05-23T18:30:00Z",
         "room":  "Mockingbird 1",
         "startTime":  "2017-05-23T17:30:00Z"
@@ -984,7 +984,7 @@
         "track":  "it",
         "title":  "Powershell Futures",
         "description":  "Abstract coming",
-        "id":  "powershellfutures",
+        "id":  "powershellfutures2",
         "endTime":  "2017-05-23T18:30:00Z",
         "room":  "Mockingbird 2",
         "startTime":  "2017-05-23T17:30:00Z"
@@ -1044,7 +1044,7 @@
         "track":  "it",
         "title":  "Azure Ad Sso Deep Dive",
         "description":  "The pain point: You need to give your on-premises Active Directory users a single-sign on (SSO) experience with SaaS apps hosted in the Azure (and other) public clouds, and you have no clue how to begin. \n\nThe solution: In this session we\u0027ll examine the options for identity synchronization and SSO in the Microsoft Azure hybrid cloud scenario. We\u0027ll use Azure AD Connect to perform both basic password synchronization as well as ADFS-based identity federation to Office 365 and other cloud-based SaaS apps. \n\nHere are some of the things you\u0027ll know how to do after attending this presentation:\n• Configure account and password synchronization to Azure AD\n• Deploy ADFS-based identity federation with Azure AD\n• Set up SSO between Azure AD and various other SaaS apps \n\nTim set up a permanent session page and GitHub repository for this presentation, so you\u0027ll be able to recreate all examples and review all session materials at your leisure.",
-        "id":  "azureadssodeepdive",
+        "id":  "azureadssodeepdive2",
         "endTime":  "2017-05-23T20:00:00Z",
         "room":  "Mockingbird 2",
         "startTime":  "2017-05-23T19:00:00Z"
