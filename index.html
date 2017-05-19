@@ -35,12 +35,12 @@
 	<div id="site-toolbar" data-role="header" data-position="fixed">
 		<div data-role="controlgroup" data-type="horizontal" data-mini="true">
 			<a href="#home-page" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Home</a>
-			<select name="conference-day" id="conference-day">
+			<select name="conference-day" id="conference-day" aria-label="Conference day">
 				<option value="1" selected>Monday</option>
 				<option value="2">Tuesday</option>
 				<option value="3">Wednesday</option>
 			</select>
-			<select name="conference-track" id="conference-track">
+			<select name="conference-track" id="conference-track" aria-label="Conference track">
 				<option value="all" selected>All</option>
 				<option value="dev">Dev</option>
 				<option value="sql">SQL</option>
@@ -78,27 +78,6 @@
 	<div data-role="page" id="sessions-page">
 		<div role="main" class="ui-content" id="sessions-listing">
 			<ul id="sessions-list" data-role="listview" data-filter="true">
-				<li>
-					<h3>{title}</h3>
-					<h3>{speaker}</h3>
-					<p>{description}</p>
-					<p class="ui-li-aside"><strong>{room}</strong></p>
-					<div data-role="controlgroup" data-type="horizontal" data-mini="true" style="display: inline">
-						<input type="radio" name="going-{id}" id="going-{id}-yes" value="yes">
-						<label for="going-{id}-yes">Yes</label>
-						<input type="radio" name="going-{id}" id="going-{id}-no" value="no">
-						<label for="going-{id}-no">No</label>
-						<input type="radio" name="going-{id}" id="going-{id}-maybe" value="maybe">
-						<label for="going-{id}-maybe">Maybe</label>
-					</div>
-					<div data-role="controlgroup" data-type="horizontal" data-mini="true" style="display: inline">
-						<a href="#session-map" data-role="button" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini" style="">Map</a>
-					</div>
-				</li>
-				<li data-role="list-divider">10:30 AM - 11:30 AM</li>
-				<li><a href="#">BMW</a></li>
-				<li><a href="#">Cadillac</a></li>
-				<li><a href="#">Ferrari</a></li>
 			</ul>
 		</div>
 	</div>
@@ -260,14 +239,14 @@
 			<h3>{speakers}</h3>
 			<p>{description}</p>
 			<p class="ui-li-aside"><strong>{room}</strong></p>
-			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
+			<div data-role="controlgroup" data-type="horizontal" data-mini="true"><fieldset aria-label="Attending?">
 				<input type="radio" name="going-{id}" id="going-{id}-yes" value="yes">
 				<label for="going-{id}-yes">Yes</label>
 				<input type="radio" name="going-{id}" id="going-{id}-no" value="no">
 				<label for="going-{id}-no">No</label>
 				<input type="radio" name="going-{id}" id="going-{id}-maybe" value="maybe">
 				<label for="going-{id}-maybe">Maybe</label>
-			</div>
+			</fieldset></div>
 			<div data-role="controlgroup" data-type="horizontal" data-mini="true">
 				<a href="#" data-talkid="{id}" class="map-button ui-btn ui-corner-all ui-shadow ui-btn-inline ui-mini" style="">Map</a>
 			</div>
@@ -279,7 +258,7 @@
 	</script>
 
 	<script type="text/html" id="talkChoiceFilterSource">
-		<select name="choiceFilter" id="choiceFilter" data-inline="true" data-mini="true">
+		<select name="choiceFilter" id="choiceFilter" data-inline="true" data-mini="true" aria-label="Choice filter">
 			<option value="all" selected>All</option>
 			<option value="yes">Yes</option>
 			<option value="no">No</option>
