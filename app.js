@@ -1,3 +1,22 @@
+window.addEventListener('load', function(e) {
+  if (window.applicationCache) {
+    console.log("Has appcache");
+    window.applicationCache.addEventListener('updateready', function(e) {
+        if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+          console.log("New cache downloaded");
+          // Browser downloaded a new app cache.
+          // Swap it in and reload the page to get the new hotness.
+          window.applicationCache.swapCache();
+          window.location.reload();
+        } else {
+          console.log("NO CACHE CHANGE");
+          // Manifest didn't changed. Nothing new to server.
+        }
+    }, false);
+  }
+}, false);
+
+
 $(function() {
     var allTalks = [];
 
