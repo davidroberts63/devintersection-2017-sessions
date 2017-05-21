@@ -196,7 +196,7 @@ $(function() {
         if(mapTalkId != null) {
             var talk = allTalks.find(byId(mapTalkId));
             document.getElementById("map-talk-name").innerText = talk.title;
-            talkRoom = talk.room.toLowerCase().replace(" ","");
+            talkRoom = talk.room.toLowerCase().replace(/ /g,"");
             var textEle = document.getElementById(talkRoom);
             if(textEle) {
                 // filter="url(#solid)"
