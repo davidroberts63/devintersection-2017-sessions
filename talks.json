@@ -96,7 +96,7 @@
         "description":  "Modern web development means that more and more application code is running in the browser as JavaScript. This architectural shift requires us to change how we perform authentication and authorization. Fortunately, using modern protocols such as OpenID Connect you don’t need to invent your own solution for this new environment. This session will show you the modern approach for browser-based JavaScript applications to authenticate users, and perform secure web api invocations. As you might expect, security is sufficiently complex and so even modern security comes with its own set of challenges. Luckily, we will show off some libraries that help manage this complexity so your application doesn’t have to.",
         "id":  "securingwebapisfromjavascriptspaapplications",
         "endTime":  "2017-05-22T15:30:00Z",
-        "room":  "Mockingbird 1",
+        "room":  "Swan 5",
         "startTime":  "2017-05-22T14:30:00Z"
     },
     {
