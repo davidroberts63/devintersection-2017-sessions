@@ -20,6 +20,16 @@
         "startTime":  "2017-05-22T14:30:00Z"
     },
     {
+        "speakers":  "Scot Hillier",
+        "track":  "it",
+        "title":  "Building Applications For Office 365 And Sharepoint With Reactjs",
+        "description":  "ReactJS is a JavaScript framework for building user interfaces. This popular framework is at the heart of the new SharePoint Framework (SPFX). In this session, ReactJS and TypeScript will be used to build client-side web parts for Office 365 and SharePoint; both on-premises and in the cloud. Attendees will exit the session with new ideas for building client-side web parts for Office 365 and SharePoint.",
+        "id":  "buildingapplicationsforofficeandsharepointwithreactjs",
+        "endTime":  "2017-05-22T15:30:00Z",
+        "room":  "Macaw",
+        "startTime":  "2017-05-22T14:30:00Z"
+    },
+    {
         "speakers":  "John Savill",
         "track":  "it",
         "title":  "Containers – What They Mean For The It Pro",
@@ -76,7 +86,7 @@
         "description":  "This session will cover real world functions that are used for real interaction with SQL Server. There will be a few slides but mostly demos with actual scripts that interact with SQL Server for management and getting data in and out. I will also introduce some outside modules created to assist as well. Things like Reading/Changing the following: Permissions, DB Owner maintenance and database space management. We all could use a few standard things in the SQL Server world of ever changing roles and “I have to have it now” stuff, that Management Studio can get in the way of getting it done faster. Join me for a fun PowerShell hour and never try to reuse a click again.",
         "id":  "practicalpowershellforsqlserver",
         "endTime":  "2017-05-22T15:30:00Z",
-        "room":  "Swan 2",
+        "room":  "Swan 1",
         "startTime":  "2017-05-22T14:30:00Z"
     },
     {
@@ -127,16 +137,6 @@
         "id":  "whatafunctioningdevopsteamlookslikeandhowtogetthere",
         "endTime":  "2017-05-22T15:30:00Z",
         "room":  "Mockingbird 2",
-        "startTime":  "2017-05-22T14:30:00Z"
-    },
-    {
-        "speakers":  "Robert Green",
-        "track":  "dev",
-        "title":  "What\u0027s New In Visual Studio 2017",
-        "description":  "Visual Studio 2017 has arrived and, no surprise, offers a ton of exciting new features. This session will provide a whirlwind tour of what\u0027s new in the latest version of Visual Studio. You\u0027ll see enhancements to code navigation, IntelliSense, refactoring, code fixes, and debugging. You\u0027ll see how live unit testing automatically runs impacted unit tests in the background as you edit your code. You\u0027ll see new language features, new tools for building mobile and UWP apps, new and improved tools for building apps powered by Azure, and more.",
-        "id":  "whatsnewinvisualstudio",
-        "endTime":  "2017-05-22T15:30:00Z",
-        "room":  "Swan 5",
         "startTime":  "2017-05-22T14:30:00Z"
     },
     {
@@ -290,16 +290,6 @@
         "startTime":  "2017-05-22T18:00:00Z"
     },
     {
-        "speakers":  "Jesse Liberty",
-        "track":  "dev",
-        "title":  "Advanced Topics In C#",
-        "description":  "This session will cover a number of advanced C# concepts including tuples, deconstruction, lambda expressions, asynchronous methods, extension methods and more.",
-        "id":  "advancedtopicsinc",
-        "endTime":  "2017-05-22T19:00:00Z",
-        "room":  "Mockingbird 1",
-        "startTime":  "2017-05-22T18:00:00Z"
-    },
-    {
         "speakers":  "Orin Thomas",
         "track":  "it",
         "title":  "Azure Security Center",
@@ -400,6 +390,16 @@
         "startTime":  "2017-05-22T18:00:00Z"
     },
     {
+        "speakers":  "Jesse Liberty",
+        "track":  "dev",
+        "title":  "Typescript For C# Developers",
+        "description":  "C# developers come to TypeScript from a very different perspective than JavaScript developers, In this session we will cover TypeScript as a first class language and show its similarities (and differences) to C#.",
+        "id":  "typescriptforcdevelopers",
+        "endTime":  "2017-05-22T19:00:00Z",
+        "room":  "Mockingbird 1",
+        "startTime":  "2017-05-22T18:00:00Z"
+    },
+    {
         "speakers":  "Mark Rackley",
         "track":  "it",
         "title":  "Utilizing Jquery In Sharepoint - Get More Done Faster",
@@ -418,16 +418,6 @@
         "endTime":  "2017-05-22T19:00:00Z",
         "room":  "Pelican 1",
         "startTime":  "2017-05-22T18:00:00Z"
-    },
-    {
-        "speakers":  "Ward Bell",
-        "track":  "dev",
-        "title":  "Asp.Net Core And Angular",
-        "description":  "ASP.NET Core is a total redesign of Microsoft’s ASP.NET platform with an eye toward high performance, cross-platform, cloud-hosted applications. \n\nGoogle’s Angular is a total redesign of its immensely popular AngularJS platform for building client-side HTML/JavaScript applications running in the browser (SPAs) \n\nAfter a brief introduction to both, this talk turns to the tools, techniques, patterns and practice that bring them together. Discover the Angular application sweet spot, how to develop Angular apps in TypeScript in Visual Studio, and how to interact with the ASP.NET Core Web API. We’ll also dip into BreezeJS as a server-to-client data management layer that spans SQL Server, EntityFramework, Web API, and Angular.",
-        "id":  "aspnetcoreandangular",
-        "endTime":  "2017-05-22T20:45:00Z",
-        "room":  "Swan 6",
-        "startTime":  "2017-05-22T19:30:00Z"
     },
     {
         "speakers":  "Steve Smith",
@@ -530,6 +520,16 @@
         "startTime":  "2017-05-22T19:30:00Z"
     },
     {
+        "speakers":  "Ward Bell",
+        "track":  "dev",
+        "title":  "Observables In Angular",
+        "description":  "Observables are a functional approach to streams of events. \n\nObservables can represent animations, user interactions (clicks, mouse moves, etc), ajax, web sockets, arrays, iterables and much more. They’re richer than Promises and much easier to read, write, and compose than traditional event handler callbacks. Think of Observables as LINQ for events \n\nRxJS is the Observables implementation favored by Angular. Many Angular APIs return RxJS Observables. Other frameworks are jumping on board. Why not you? \n\nThis presentation covers what they are, when to use them, which RxJS operators you should know, and how to cope with errors as well as success.",
+        "id":  "observablesinangular",
+        "endTime":  "2017-05-22T20:45:00Z",
+        "room":  "Swan 6",
+        "startTime":  "2017-05-22T19:30:00Z"
+    },
+    {
         "speakers":  "David Pless",
         "track":  "sql",
         "title":  "Sql Server 2016: Alwayson Availability Groups Features",
@@ -561,8 +561,8 @@
     },
     {
         "speakers":  "Shep Sheppard",
-        "track":  "dev",
-        "title":  "Data Science: What Is It Adn Do I Need It?",
+        "track":  "it",
+        "title":  "Data Science: What Is It And Do I Need It?",
         "description":  "",
         "id":  "datasciencewhatisitadndoineedit",
         "endTime":  "2017-05-23T13:30:00Z",
@@ -578,6 +578,16 @@
         "endTime":  "2017-05-23T13:30:00Z",
         "room":  "Swan Ballroom",
         "startTime":  "2017-05-23T12:30:00Z"
+    },
+    {
+        "speakers":  "Brent Ozar",
+        "track":  "sql",
+        "title":  "Always On Availability Groups: Backup And Checkdb",
+        "description":  "You’ve decided to implement Always On Availability Groups, but now the really tricky part starts: where should you run backups and DBCCs? You’ll get a set of client requirements, design your own maintenance strategy, and then Brent will throw surprise curveballs at your design to see how it handles various real-world emergency scenarios",
+        "id":  "alwaysonavailabilitygroupsbackupandcheckdb",
+        "endTime":  "2017-05-23T15:00:00Z",
+        "room":  "Swan 2",
+        "startTime":  "2017-05-23T14:00:00Z"
     },
     {
         "speakers":  "Kimberly Tripp",
@@ -650,16 +660,6 @@
         "startTime":  "2017-05-23T14:00:00Z"
     },
     {
-        "speakers":  "Paul Randal",
-        "track":  "sql",
-        "title":  "Index Fragmentation: Internals, Analysis, And Solutions",
-        "description":  "As soon as you have more than one index on a table, you\u0027re going to start seeing fragmentation. Many people know that this fragmentation is bad, but why is it bad? And what is the best way to get rid of it? Come find out from the person who wrote the tools for detecting and removing index fragmentation. In this session, you’ll learn how fragmentation occurs and why the process that leads to it can often be as damaging to performance as the fragmentation itself. You\u0027ll also learn how to test for fragmentation, the different methods of removing it, and everything you need to consider when putting together an appropriate fragmentation-management strategy.",
-        "id":  "indexfragmentationinternalsanalysisandsolutions",
-        "endTime":  "2017-05-23T15:00:00Z",
-        "room":  "Swan 4",
-        "startTime":  "2017-05-23T14:00:00Z"
-    },
-    {
         "speakers":  "Michele Bustamante",
         "track":  "dev",
         "title":  "Message Brokers And Containers - The New Esb Is “No Esb”",
@@ -686,17 +686,7 @@
         "description":  "Modern web development means that more and more application code is running in the browser as JavaScript. This architectural shift requires us to change how we perform authentication and authorization. Fortunately, using modern protocols such as OpenID Connect you don’t need to invent your own solution for this new environment. This session will show you the modern approach for browser-based JavaScript applications to authenticate users, and perform secure web api invocations. As you might expect, security is sufficiently complex and so even modern security comes with its own set of challenges. Luckily, we will show off some libraries that help manage this complexity so your application doesn’t have to.",
         "id":  "securingwebapisfromjavascriptspaapplications",
         "endTime":  "2017-05-23T15:00:00Z",
-        "room":  "Mockingbird 1",
-        "startTime":  "2017-05-23T14:00:00Z"
-    },
-    {
-        "speakers":  "Bob Ward",
-        "track":  "sql",
-        "title":  "Sql Server Hybrid: What Every Sql Professional Should Know",
-        "description":  "One of the tenants to Microsoft’s Cloud Strategy is Cloud on Your Terms through solutions that are global, trusted, and hybrid. Your choices range from pure cloud, on-premises, and hybrid cloud solutions. In this session, we will explore and look behind the scenes to see how SQL Server 2016 provides Hybrid Cloud capabilities. These include Azure SQL Stretch Database, SQL Server Backup and Restore to/from the Cloud, Database files in Azure Blob Storage, and Always On Availability Groups extended to Azure. We will look at the architecture that powers these technologies, talk about the business value and why you would want to choose these capabilities, plus some demonstrations to understand how to configure and see these features in action. If you have been thinking about what investments to make in Azure and SQL Server, come learn about how SQL Server 2016 Hybrid can you help move to the cloud on your terms.",
-        "id":  "sqlserverhybridwhateverysqlprofessionalshouldknow",
-        "endTime":  "2017-05-23T15:00:00Z",
-        "room":  "Swan 3",
+        "room":  "Swan 5",
         "startTime":  "2017-05-23T14:00:00Z"
     },
     {
@@ -710,19 +700,9 @@
         "startTime":  "2017-05-23T14:00:00Z"
     },
     {
-        "speakers":  "Rob Lauer",
-        "track":  "dev",
-        "title":  "The Rise Of Javascript-Driven Native \u0026 Nativescript",
-        "description":  "For nearly a decade, developers and IT organizations have been struggling to find the right way to build and maintain apps for the many platforms users depend on daily. Writing natively for every platform is still expensive, and many of the cross-platform solutions to date have forced developers to make compromises that hurt user experience. The industry has failed to produce app development solutions that deliver the code and skill portability IT leadership desires with the uncompromised, rich experiences users demand. Fortunately, a new wave of next generation platforms promises to radically improve the state of the art. “JavaScript-driven Native” platforms, like NativeScript, finally combine the skill and code portability of the web with the unlimited power of native platform UI. Put an end to your cross-platform app development woes and join this session to learn about JavaScript-driven Native and the open source platforms like NativeScript leading the way.",
-        "id":  "theriseofjavascriptdrivennativenativescript",
-        "endTime":  "2017-05-23T15:00:00Z",
-        "room":  "Osprey",
-        "startTime":  "2017-05-23T14:00:00Z"
-    },
-    {
         "speakers":  "Erin Stellato",
         "track":  "sql",
-        "title":  "The Roadmap To Better Performance: Reading Query Plans, Part",
+        "title":  "The Roadmap To Better Performance: Reading Query Plans, Part I",
         "description":  "Whether you’re a DBA or a developer, you probably know that when you submit a query to SQL Server it generates a plan – a map if you will – that determines how it will get the data you’ve requested. But if you’re not familiar with how to read that map, then how do you know how to create a faster route to the data? How can you tune a query? If you’ve been lost when looking at plans before, then attend this session where we will cover the basics of query plans. We\u0027ll step through how to capture plans, discuss the essential information to review in a plan, and talk about what you can ignore when looking at a plan. This session will be filled with demos so that the next time you\u0027re asked to help with a query, you know where to start.",
         "id":  "theroadmaptobetterperformancereadingqueryplanspart",
         "endTime":  "2017-05-23T15:00:00Z",
@@ -738,16 +718,6 @@
         "endTime":  "2017-05-23T15:15:00Z",
         "room":  "Swan 5",
         "startTime":  "2017-05-23T15:00:00Z"
-    },
-    {
-        "speakers":  "Brent Ozar",
-        "track":  "sql",
-        "title":  "Always On Availability Groups: Backup And Checkdb",
-        "description":  "You’ve decided to implement Always On Availability Groups, but now the really tricky part starts: where should you run backups and DBCCs? You’ll get a set of client requirements, design your own maintenance strategy, and then Brent will throw surprise curveballs at your design to see how it handles various real-world emergency scenarios",
-        "id":  "alwaysonavailabilitygroupsbackupandcheckdb",
-        "endTime":  "2017-05-23T16:15:00Z",
-        "room":  "Swan 4",
-        "startTime":  "2017-05-23T15:15:00Z"
     },
     {
         "speakers":  "Rob Windsor",
@@ -973,16 +943,6 @@
         "speakers":  "Jeffrey Snover",
         "track":  "dev",
         "title":  "Powershell Futures",
-        "description":  "Coming soon",
-        "id":  "powershellfutures1",
-        "endTime":  "2017-05-23T18:30:00Z",
-        "room":  "Mockingbird 1",
-        "startTime":  "2017-05-23T17:30:00Z"
-    },
-    {
-        "speakers":  "Jeffrey Snover",
-        "track":  "it",
-        "title":  "Powershell Futures",
         "description":  "Abstract coming",
         "id":  "powershellfutures2",
         "endTime":  "2017-05-23T18:30:00Z",
@@ -1042,7 +1002,7 @@
     {
         "speakers":  "Tim Warner",
         "track":  "it",
-        "title":  "Azure Ad Sso Deep Dive",
+        "title":  "Azure Networking Deep Dive",
         "description":  "The pain point: You need to give your on-premises Active Directory users a single-sign on (SSO) experience with SaaS apps hosted in the Azure (and other) public clouds, and you have no clue how to begin. \n\nThe solution: In this session we\u0027ll examine the options for identity synchronization and SSO in the Microsoft Azure hybrid cloud scenario. We\u0027ll use Azure AD Connect to perform both basic password synchronization as well as ADFS-based identity federation to Office 365 and other cloud-based SaaS apps. \n\nHere are some of the things you\u0027ll know how to do after attending this presentation:\n• Configure account and password synchronization to Azure AD\n• Deploy ADFS-based identity federation with Azure AD\n• Set up SSO between Azure AD and various other SaaS apps \n\nTim set up a permanent session page and GitHub repository for this presentation, so you\u0027ll be able to recreate all examples and review all session materials at your leisure.",
         "id":  "azureadssodeepdive2",
         "endTime":  "2017-05-23T20:00:00Z",
@@ -1190,6 +1150,16 @@
         "startTime":  "2017-05-23T20:15:00Z"
     },
     {
+        "speakers":  "Robert Green",
+        "track":  "dev",
+        "title":  "What\u0027s New In Visual Studio 2017",
+        "description":  "Visual Studio 2017 has arrived and, no surprise, offers a ton of exciting new features. This session will provide a whirlwind tour of what\u0027s new in the latest version of Visual Studio. You\u0027ll see enhancements to code navigation, IntelliSense, refactoring, code fixes, and debugging. You\u0027ll see how live unit testing automatically runs impacted unit tests in the background as you edit your code. You\u0027ll see new language features, new tools for building mobile and UWP apps, new and improved tools for building apps powered by Azure, and more.",
+        "id":  "whatsnewinvisualstudio",
+        "endTime":  "2017-05-23T21:15:00Z",
+        "room":  "Osprey",
+        "startTime":  "2017-05-23T20:15:00Z"
+    },
+    {
         "speakers":  "",
         "track":  "it",
         "title":  "Security After Dark",
@@ -1320,6 +1290,16 @@
         "startTime":  "2017-05-24T14:00:00Z"
     },
     {
+        "speakers":  "Paul Randal",
+        "track":  "sql",
+        "title":  "Index Fragmentation: Internals, Analysis, And Solutions",
+        "description":  "As soon as you have more than one index on a table, you\u0027re going to start seeing fragmentation. Many people know that this fragmentation is bad, but why is it bad? And what is the best way to get rid of it? Come find out from the person who wrote the tools for detecting and removing index fragmentation. In this session, you’ll learn how fragmentation occurs and why the process that leads to it can often be as damaging to performance as the fragmentation itself. You\u0027ll also learn how to test for fragmentation, the different methods of removing it, and everything you need to consider when putting together an appropriate fragmentation-management strategy.",
+        "id":  "indexfragmentationinternalsanalysisandsolutions",
+        "endTime":  "2017-05-24T15:00:00Z",
+        "room":  "Swan 4",
+        "startTime":  "2017-05-24T14:00:00Z"
+    },
+    {
         "speakers":  "Dan Wahlin",
         "track":  "dev",
         "title":  "Integrating Angular With Asp.Net Core Restful Services",
@@ -1367,6 +1347,26 @@
         "id":  "realworldusecasesforpowerappsandflow",
         "endTime":  "2017-05-24T15:00:00Z",
         "room":  "Macaw",
+        "startTime":  "2017-05-24T14:00:00Z"
+    },
+    {
+        "speakers":  "Bob Ward",
+        "track":  "sql",
+        "title":  "Sql Server Hybrid: What Every Sql Professional Should Know",
+        "description":  "One of the tenants to Microsoft’s Cloud Strategy is Cloud on Your Terms through solutions that are global, trusted, and hybrid. Your choices range from pure cloud, on-premises, and hybrid cloud solutions. In this session, we will explore and look behind the scenes to see how SQL Server 2016 provides Hybrid Cloud capabilities. These include Azure SQL Stretch Database, SQL Server Backup and Restore to/from the Cloud, Database files in Azure Blob Storage, and Always On Availability Groups extended to Azure. We will look at the architecture that powers these technologies, talk about the business value and why you would want to choose these capabilities, plus some demonstrations to understand how to configure and see these features in action. If you have been thinking about what investments to make in Azure and SQL Server, come learn about how SQL Server 2016 Hybrid can you help move to the cloud on your terms.",
+        "id":  "sqlserverhybridwhateverysqlprofessionalshouldknow",
+        "endTime":  "2017-05-24T15:00:00Z",
+        "room":  "Swan 3",
+        "startTime":  "2017-05-24T14:00:00Z"
+    },
+    {
+        "speakers":  "Rob Lauer",
+        "track":  "dev",
+        "title":  "The Rise Of Javascript-Driven Native \u0026 Nativescript",
+        "description":  "For nearly a decade, developers and IT organizations have been struggling to find the right way to build and maintain apps for the many platforms users depend on daily. Writing natively for every platform is still expensive, and many of the cross-platform solutions to date have forced developers to make compromises that hurt user experience. The industry has failed to produce app development solutions that deliver the code and skill portability IT leadership desires with the uncompromised, rich experiences users demand. Fortunately, a new wave of next generation platforms promises to radically improve the state of the art. “JavaScript-driven Native” platforms, like NativeScript, finally combine the skill and code portability of the web with the unlimited power of native platform UI. Put an end to your cross-platform app development woes and join this session to learn about JavaScript-driven Native and the open source platforms like NativeScript leading the way.",
+        "id":  "theriseofjavascriptdrivennativenativescript",
+        "endTime":  "2017-05-24T15:00:00Z",
+        "room":  "Mockingbird 1",
         "startTime":  "2017-05-24T14:00:00Z"
     },
     {
@@ -1498,6 +1498,26 @@
         "endTime":  "2017-05-24T16:15:00Z",
         "room":  "Swan 4",
         "startTime":  "2017-05-24T15:15:00Z"
+    },
+    {
+        "speakers":  "Justin Detolla",
+        "track":  "dev",
+        "title":  "Where Development And Design Intersect (Or Collide) - Left Brain, Meet Right",
+        "description":  "",
+        "id":  "wheredevelopmentanddesignintersectorcollideleftbrainmeetright",
+        "endTime":  "2017-05-24T16:15:00Z",
+        "room":  "Mockingbird 1",
+        "startTime":  "2017-05-24T15:15:00Z"
+    },
+    {
+        "speakers":  "John Papa, Shayne Boyer",
+        "track":  "dev",
+        "title":  "Api\u0027s For Angular Apps With Azure Functions",
+        "description":  "",
+        "id":  "apisforangularappswithazurefunctions",
+        "endTime":  "2017-05-24T18:30:00Z",
+        "room":  "Swan 10",
+        "startTime":  "2017-05-24T17:30:00Z"
     },
     {
         "speakers":  "Paul Yuknewicz",
