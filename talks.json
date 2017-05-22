@@ -94,7 +94,7 @@
         "track":  "dev",
         "title":  "Securing Web Apis From Mobile And Native Applications",
         "description":  "Mobile devices and applications are becoming the prominent mechanism for users to operate digitally. Developing for these platforms is new for many developers and how to build secure applications for these environments is crucial. Fortunately, inventing your own security is not necessary (or recommended) and instead you can rely upon the OpenID Connect protocol. This session shows how to use this protocol to authenticate your users, as well as gain secure access to the backend APIs that support your applications. In addition to these basics, we will discuss more advanced security features of the protocols including PKCE and PoP.",
-        "id":  "securingwebapisfromjavascriptspaapplications",
+        "id":  "securingwebapisfrommobileandnativeapplications",
         "endTime":  "2017-05-22T15:30:00Z",
         "room":  "Swan 5",
         "startTime":  "2017-05-22T14:30:00Z"
@@ -782,9 +782,9 @@
     {
         "speakers":  "Mitchell Kruzel",
         "track":  "it",
-        "title":  "Infrastructure From Code - A Walkthrough",
-        "description":  "In this session we will work through a real world example of creating infrastructure from code. In this example we will use a TFS GIT Repository to source control all of our PowerShell deployment scripts. Using the TFS Build process we will: 1) test our PowerShell script to ensure the scripts are of good quality 2) Execute the source controlled PowerShell scripts to create VMs and 3) Use DSC to configure the newly provisioned VM. This will be a start to finish infrastructure deployment strategy. \n\nFrom this session, you will learn the basic client interactions with a GIT Repository, understand the basics of a TFS GIT Repository, learn how to set up a TFS Build to test and execute PowerShell scripts, and finally how to create a VM from a template and bootstrap a DSC Configuration into it.",
-        "id":  "infrastructurefromcodeawalkthrough",
+        "title":  "Infrastructure Testing From Code",
+        "description":  "In this session we will work through a real world example of testing infrastructure from code. Most, if not all, IT shops have some sort of monitoring solutions in place. Often times these solutions generate hundreds of worthless alerts. This session offers a different approach to monitoring. We will use PowerShell scripts to test our infrastructure at an application level to ensure that everything is working as expected. For example, Connect to a SQL Server and ensure that it returns data. Connect to a website and make sure it returns a valid status code and validate that the page returned is valid.",
+        "id":  "infrastructuretestingfromcode",
         "endTime":  "2017-05-23T16:15:00Z",
         "room":  "Pelican 2",
         "startTime":  "2017-05-23T15:15:00Z"
@@ -1127,6 +1127,16 @@
         "id":  "jumpstartdigitalcollaborationwithofficegroupsandteams",
         "endTime":  "2017-05-23T21:15:00Z",
         "room":  "Macaw",
+        "startTime":  "2017-05-23T20:15:00Z"
+    },
+    {
+        "speakers":  "Kimberly Tripp",
+        "track":  "sql",
+        "title":  "Optimizing For Osfa: Catch-All-Queries In One-Size-Fits-All Procedures",
+        "description":  "Have your developers created generic procedures that address many options all at once? Specifically, do you have just one stored procedure handle many input parameters? It’s not impossible to do but the common strategy used (see below) does not optimize work!\nWHERE (col1 = @param1 OR @param1 is NULL)\n  AND (col2 = @param2 OR @param2 is NULL)\n  AND …\nCome to this developer-focused general session to understand how to write more generic yet more optimal (and more scalable) code.  Kimberly will discuss stored procedure caching and optimization as well as the performance problems that come from OSFA complexities! There are some common solutions [for example, adding OPTION (RECOMPILE) to your code] and while it can drastically improve performance in the short-term, it can also cause other problems in the long-term. Ideally, a hybrid solution is needed. Attend this session and you’ll learn (and see!) the best way to write procedures that find the right balance between recompiling too often and not recompiling enough! In the end, this gives you the most optimal performance without wasting resources such as CPU!",
+        "id":  "optimizingforosfacatchallqueriesinonesizefitsallprocedures",
+        "endTime":  "2017-05-23T21:15:00Z",
+        "room":  "Swan 2 - 3",
         "startTime":  "2017-05-23T20:15:00Z"
     },
     {
