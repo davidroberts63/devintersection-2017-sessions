@@ -92,8 +92,8 @@
     {
         "speakers":  "Brock Allen",
         "track":  "dev",
-        "title":  "Securing Web Apis From Javascript/Spa Applications",
-        "description":  "Modern web development means that more and more application code is running in the browser as JavaScript. This architectural shift requires us to change how we perform authentication and authorization. Fortunately, using modern protocols such as OpenID Connect you don’t need to invent your own solution for this new environment. This session will show you the modern approach for browser-based JavaScript applications to authenticate users, and perform secure web api invocations. As you might expect, security is sufficiently complex and so even modern security comes with its own set of challenges. Luckily, we will show off some libraries that help manage this complexity so your application doesn’t have to.",
+        "title":  "Securing Web Apis From Mobile And Native Applications",
+        "description":  "Mobile devices and applications are becoming the prominent mechanism for users to operate digitally. Developing for these platforms is new for many developers and how to build secure applications for these environments is crucial. Fortunately, inventing your own security is not necessary (or recommended) and instead you can rely upon the OpenID Connect protocol. This session shows how to use this protocol to authenticate your users, as well as gain secure access to the backend APIs that support your applications. In addition to these basics, we will discuss more advanced security features of the protocols including PKCE and PoP.",
         "id":  "securingwebapisfromjavascriptspaapplications",
         "endTime":  "2017-05-22T15:30:00Z",
         "room":  "Swan 5",
@@ -456,7 +456,7 @@
         "description":  "Heard of Octopus Deploy but haven\u0027t had a chance to try it? Is your company using Octopus but you haven\u0027t explored it much yourself? Or are you an active user and want to learn some new tips and tricks? If deploying your app is harder than making a cup of coffee, this is a session you can\u0027t miss. \n\nStarting from scratch with fresh machines, we\u0027ll work our way towards a complete deployment automation pipeline for an example application. We\u0027ll install and configure the Octopus components, configure environments, set up projects, add deployment steps, and configure security. We\u0027ll even look at the API and how we can integrate with third party applications - everything you need for efficient and reliable end to end deployment. By the end of the session, we\u0027ll be deploying our app with a complete, working, continuous delivery pipeline. \n\nDespite being demo-centric, this session won\u0027t just be about the how. As we progress there\u0027ll be explanations of how and why Octopus works the way it does, and we\u0027ll discuss some of the DevOps best practices that drive the product. Whatever your exposure to Octopus Deploy, this session has something for you.",
         "id":  "continuousdeploymentinmwithoctopusdeploy",
         "endTime":  "2017-05-22T20:45:00Z",
-        "room":  "Macaw",
+        "room":  "Mockingbird 2",
         "startTime":  "2017-05-22T19:30:00Z"
     },
     {
