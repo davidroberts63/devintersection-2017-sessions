@@ -94,7 +94,7 @@
         "track":  "dev",
         "title":  "Securing Web Apis From Mobile And Native Applications",
         "description":  "Mobile devices and applications are becoming the prominent mechanism for users to operate digitally. Developing for these platforms is new for many developers and how to build secure applications for these environments is crucial. Fortunately, inventing your own security is not necessary (or recommended) and instead you can rely upon the OpenID Connect protocol. This session shows how to use this protocol to authenticate your users, as well as gain secure access to the backend APIs that support your applications. In addition to these basics, we will discuss more advanced security features of the protocols including PKCE and PoP.",
-        "id":  "securingwebapisfrommobileandnativeapplications",
+        "id":  "securingwebapisfromjavascriptspaapplications",
         "endTime":  "2017-05-22T15:30:00Z",
         "room":  "Swan 5",
         "startTime":  "2017-05-22T14:30:00Z"
