@@ -87,7 +87,10 @@ $(function() {
 
     function forTalksDecided(selectedChoice) {
         return function(item, index, arr) {
-            return selectedChoice == "all" || localStorage.getItem("going-" + item.id) == selectedChoice;
+            var stored = localStorage.getItem("going-" + item.id)
+            return selectedChoice == "all" 
+                || selectedChoice == "Y/M" && (stored == "yes" || stored == "maybe")
+                || stored == selectedChoice;
         }
     }
 
