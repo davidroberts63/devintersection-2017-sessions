@@ -1,0 +1,398 @@
+[33mcommit 5f750d21f836fca4208685b5e7654798e9aace84[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Wed May 24 14:53:57 2017 +0000
+
+    Update talk data
+
+[33mcommit c139b94462d92944f0f4e44ebb7f90fc94ac7083[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Tue May 23 13:18:29 2017 -0400
+
+    version bump
+
+[33mcommit 457a3dcb634a86ad2ccf862f407d57a60fe93ef5[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Tue May 23 13:17:12 2017 -0400
+
+    yes maybe filter
+
+[33mcommit e644898359abf7567fd0325a11b03ad54d213c2e[m[33m ([m[1;31morigin/gh-pages[m[33m, [m[1;32mgh-pages[m[33m)[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Tue May 23 13:10:36 2017 +0000
+
+    Fixed encoding, notepad doesn't care about them
+
+[33mcommit 154a75c8ad517e1e2ec34200d442ee7502f497f4[m
+Merge: 2910991 994439c
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Mon May 22 20:56:02 2017 +0000
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit 994439ccfd1600af65cf41128af5f5d9a643feed[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Mon May 22 20:55:00 2017 +0000
+
+    update talks and version bump
+
+[33mcommit 9be47810ad777e528c21b071d63d7f0e8028f69d[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Mon May 22 20:46:39 2017 +0000
+
+    Update talk data
+
+[33mcommit 2910991c73d5c40ce9dd293f2790096d0b9bcb89[m
+Merge: 74afa01 10a1856
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 22 09:29:22 2017 -0500
+
+    Merge pull request #5 from davidroberts63/master
+    
+    Update talks
+
+[33mcommit 10a1856f93a130fac4929262211b23f30a61a422[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 22 10:28:02 2017 -0400
+
+    Update appcache
+
+[33mcommit ce1bb9fde033886f6383d4bb2a05710493c709ef[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 22 10:27:32 2017 -0400
+
+    Update index.html
+
+[33mcommit d9359cd9f25892524f1a9fd6961cbf888f878cfb[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 22 10:26:34 2017 -0400
+
+    Use original id
+
+[33mcommit ead2cdf70d8043b348c4296c566e8747ff6f75f5[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Mon May 22 14:21:32 2017 +0000
+
+    Update talk data
+
+[33mcommit c2e075e7b46c7b74db767615dbb5da81d49f864b[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Sun May 21 19:00:53 2017 +0000
+
+    Update talk data
+
+[33mcommit 44b691dd459fb4c5e24e87b2cd2e7e3b04eb446a[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Sun May 21 19:00:11 2017 +0000
+
+    Testing
+
+[33mcommit e937749d7f306f613a8d12987d889fd0f625b61c[m
+Author: davidroberts63 <david@teapotcoder.com>
+Date:   Sun May 21 18:57:48 2017 +0000
+
+    Verifying connection from VM
+
+[33mcommit 74afa0161a4cc1cbaca60c327a0e69e699caeae2[m
+Merge: d3aa0e9 c35a480
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 12:04:52 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit c35a480affc484d8367447a2c0174263c5940271[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 12:04:46 2017 -0500
+
+    Updated events data
+
+[33mcommit d3aa0e9b5394ae94cccfc2394c9c732b0411b27e[m
+Merge: f2740a2 a06e4ce
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 11:54:01 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit a06e4cec3d3e34226a4f7289a01b9030bbbcd28c[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 11:53:54 2017 -0500
+
+    Enable auto update when appcache has an update
+
+[33mcommit f2740a2b8e0743630e862b11a8e8e97106ca4cba[m
+Merge: 971a5b3 9cab9f6
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 08:51:41 2017 -0500
+
+    Merge branch 'gh-pages' of https://github.com/davidroberts63/devintersection-2017-sessions into gh-pages
+
+[33mcommit 971a5b367e029f2e80ccb3697ce4e4c15d47d637[m
+Merge: 79d4601 0bb6e5c
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sun May 21 08:45:28 2017 -0500
+
+    Updated data as of 10:45 AM
+
+[33mcommit 9cab9f62aa7e901bf6e6798b2c27e851df536ae5[m
+Merge: 5b9c83f 0bb6e5c
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Sun May 21 09:34:32 2017 -0400
+
+    Updated data as of 11:50 May 20th
+
+[33mcommit 0bb6e5c9dabb26a7598c93682cfe8536908e4614[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Sat May 20 23:59:31 2017 -0500
+
+    Updated session data in response to EventsXD notfication
+
+[33mcommit 5b9c83fb77da1e95b972a8db87bb78ff03de5366[m
+Merge: 706c6a5 a1e5817
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:55:20 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit a1e581772efe2da25278d6992d9ce8b2fd5d269d[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:55:14 2017 -0500
+
+    Notes and version bump
+
+[33mcommit 8039b07cc27f4276fb1c9acbc03ef7150a310e04[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:51:55 2017 -0500
+
+    Sigh, JavaScript, I hate you.
+
+[33mcommit ca77b3c312f3d801da115f0f4d70f90ab5ddf7bd[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:50:36 2017 -0500
+
+    Setup map for multiroom talks
+
+[33mcommit a4a287517fb256e1a9ec51cea34df35c7b801e05[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:33:32 2017 -0500
+
+    Making duplicate talks distinct
+
+[33mcommit ae2de6409407133189dd458e63ba6f8941f60255[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:33:13 2017 -0500
+
+    Adding ARIA elements
+
+[33mcommit df557eb805739dacb3f2cfc296438a433b3a032a[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 23:01:27 2017 -0500
+
+    Updated all talks as of what I 'think' is accurate
+
+[33mcommit 706c6a536c0f2ee2993411ba366e7364185e1fb1[m
+Merge: 0bca62b 5498e11
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 18:23:52 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit 5498e11019afce9d7a683c1c865b23b71b583f0d[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 18:23:47 2017 -0500
+
+    Version bump
+
+[33mcommit 0bca62bc25b07d97d84434dd07443a5e557bd6b1[m
+Merge: 79d4601 8dd70f2
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 18:21:00 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit 8dd70f29b01d0e0ed20e491c6d006b4578be78da[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 18:20:44 2017 -0500
+
+    Trying to correct datetime format for Safari
+
+[33mcommit 79d4601fede5ec862eeeb9496f3be44781e91267[m
+Merge: 2dbcb72 efd896d
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 16:05:15 2017 -0500
+
+    Merge branch 'master' into gh-pages
+
+[33mcommit efd896d80b64faf343634a5da0ee6c174d7957d8[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 16:05:07 2017 -0500
+
+    Add version number to home page
+
+[33mcommit 2dbcb72a7f4b0131a86f723e720cbabaccb6b148[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 16:00:22 2017 -0500
+
+    Minor cleanup and appcache version bump
+
+[33mcommit 06f3c684aaa8809e367f7d40d2b31a88bb8d141d[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 15:56:55 2017 -0500
+
+    Add listing items only once with larger single html source. Also add functions for easier performance analysis
+
+[33mcommit 5f1be04762fa03ee612933d0778f956af25f4035[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 13:41:44 2017 -0500
+
+    Moved js into separate file
+
+[33mcommit 75f574f81a2e429b421ce6da8e8fabe17e75b85f[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 13:38:38 2017 -0500
+
+    Note on what data is complete/incomplete
+
+[33mcommit 93e2eca2da62bd48e8dde11c6f08fb24bbc49284[m
+Author: David Roberts <david@teapotcoder.com>
+Date:   Thu May 18 13:35:04 2017 -0500
+
+    Timezones + JavaScript + Multi browsers = upset stomach
+
+[33mcommit 0297bc56cca86fde11e28082ad859f26c81a55af[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 01:11:18 2017 -0500
+
+    Local jquery external reqs became inconsistent
+
+[33mcommit 0a2a1c2ef4f7cc87e7e5228f0bd19f8fd3739bd3[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 01:03:06 2017 -0500
+
+    Cache version bump
+
+[33mcommit d6889aad2812626b83ead77ca883b49f16d42707[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 01:01:15 2017 -0500
+
+    Added links and text to home
+
+[33mcommit 40517e253fcaaf2e027738fc053f5f295f923fb5[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 00:57:04 2017 -0500
+
+    Add sponsors links
+
+[33mcommit 6f2993db599ffa46c2146735b9f0b0900c49bd72[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 00:36:50 2017 -0500
+
+    Add swan ballroom to map
+
+[33mcommit a3ef5f1cb2aa40a2ae098799b50eb840ce8520f2[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Thu May 18 00:36:25 2017 -0500
+
+    Dev track times and rooms updated
+
+[33mcommit d4e4a90b5fc08760450c6706eb0b1a90a80245de[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 23:11:41 2017 -0500
+
+    Add custom domain
+
+[33mcommit bd189162396b29cb506cca644a17718f3f314682[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 23:02:00 2017 -0500
+
+    Sigh, it was all in the clear
+
+[33mcommit ebca60a0a68c0dbf55fe5076ff197f1a814a4b99[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 22:59:19 2017 -0500
+
+    Remove unneeded files
+
+[33mcommit c15d7f8e25832f013ce20c67df74ff0a7a45171d[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 22:57:53 2017 -0500
+
+    Turn appcache back on
+
+[33mcommit 105a7d01645a54ddc8e1b26c859238fbaa3611de[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 22:47:10 2017 -0500
+
+    Going choice filter added
+
+[33mcommit 3c049563c66cf4c060974194f4faf9afe7c35567[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 20:19:02 2017 -0500
+
+    Slightly better highlight of room on map
+
+[33mcommit 4808748c10b6629d46e69bdbe1ddc993a265b2ef[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 19:07:16 2017 -0500
+
+    Better initial display of sessions
+
+[33mcommit 41c1c49e31dcc0f77059afd01cedf87e82ed113a[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 18:30:32 2017 -0500
+
+    Easier way to get back to sessions
+
+[33mcommit e8677d02fb24e73d9a18f97186368335fe2ca336[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 18:09:12 2017 -0500
+
+    Got the map working. :-)
+
+[33mcommit 91094133d06da28bbaca45386f09923b6b511538[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 15:54:54 2017 -0500
+
+    Local storage of session choices
+
+[33mcommit 6eb8d6e9a62a3e48e967d05377697f4177ecb8f0[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Wed May 17 15:26:10 2017 -0500
+
+    Initial load of all talks, fixed group headers
+
+[33mcommit dd2448212b06dd6de92361d5646bfa77fbd59741[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Tue May 16 16:38:14 2017 -0500
+
+    Assign room ids to text
+
+[33mcommit 5473b4ce6b32960006d04c898afda790a0caecaa[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Tue May 16 16:17:54 2017 -0500
+
+    Removed a lot of unneeded aspects of the map
+
+[33mcommit d8a7d6cde89205209a825d4cf3c7fed33e7dbb33[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Tue May 16 15:45:19 2017 -0500
+
+    Got floorplan for conference
+
+[33mcommit d36c959763b0d5ff528d5c86c1f348e7cfe5c0b7[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 15 23:59:41 2017 -0500
+
+    All page links and initial session list on first click
+
+[33mcommit 743036a4182b7060692591f7f9f363601e2f7c76[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 15 23:48:28 2017 -0500
+
+    Initial mobile site
+    
+    Rough, junk data.
+
+[33mcommit 9b5d5d5d4feb77c5489905bc616f6f543c0e55e2[m
+Author: David Roberts <david.roberts63@gmail.com>
+Date:   Mon May 15 23:47:40 2017 -0500
+
+    Initial commit
