@@ -1440,7 +1440,7 @@
         "startTime":  "2017-05-24T15:15:00Z"
     },
     {
-        "speakers":  "Mikkel Mork Heghhoj, Paul Yuknewicz",
+        "speakers":  "Mikkel Mork Heghhoj",
         "track":  "dev",
         "title":  "Getting Started Developing .Net Cloud Applications On Azure Using Visual Studio",
         "description":  "How easy is it to get .NET application to run in Azure? Do .NET applications run better in Azure, and how? In this talk we will walk through the unique enhancements we have built in to Azure for giving your .NET applications the best fit in the cloud. We’ll show you a fast path to get existing apps up on Azure. We’ll also show you how to build modern scalable cloud app patterns for Web App and worker microservices using Docker. We’ll also show you how to be incredibly productive building and debugging your app using Visual Studio.",
